@@ -7,8 +7,6 @@ generate_disks_arm: true
 generate_signatures: true
 generate_version_file: true
 
-bootloader_multiple: true
-
 site_name: punksky boot
 
 boot_domain: boot.punksky.com
