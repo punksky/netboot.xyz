@@ -5,7 +5,6 @@ generate_disks: true
 generate_checksums: true
 generate_disks_arm: true
 generate_signatures: true
-generate_version_file: true
 
 site_name: punksky boot
 
