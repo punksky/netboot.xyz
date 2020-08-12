@@ -3,14 +3,16 @@
 generate_menus: true
 generate_disks: true
 generate_checksums: true
-generate_signatures: true
 
+# set desired site name
 site_name: punksky boot
 
+# set desired boot domain
 boot_domain: boot.punksky.com
 
+# set boot version
 #boot_version: "2.x"
+
+#bootloader_tftp_enabled: false
 bootloader_https_enabled: true
 bootloader_http_enabled: true
-
-win_base_url: "http://cdn.punksky.com/netboot/windows/"
