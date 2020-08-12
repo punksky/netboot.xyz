@@ -17,7 +17,7 @@ boot_domain: boot.punksky.com
 #bootloader_tftp_enabled: false
 bootloader_https_enabled: true
 bootloader_http_enabled: true
-
+generate_disks_arm: true
 # set release overrides from standard netboot.xyz defaults
 #release_overrides:
 #  alpinelinux:
@@ -36,5 +36,5 @@ bootloader_http_enabled: true
 #    enabled: false
 
 # set licensed media locations in boot.cfg
-win_base_url: "http://download.punksky.com/netboot/windows/"
+win_base_url: "http://cdn.punksky.com/netboot/windows/"
 # rhel_base_url: 

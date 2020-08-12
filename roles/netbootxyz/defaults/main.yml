@@ -165,14 +165,16 @@ releases:
     base_dir: proxmox
     enabled: true
     menu: linux
-    mirror: http://download.punksky.com/netboot/proxmox/
+    mirror: http://cdn.punksky.com/netboot/
     name: Proxmox
     versions:
       stable:
-      - code_name: buster
-        name: 10.0 (buster)
-      - code_name: stretch
-        name: 9.0 (stretch)
+      - code_name: ve-6.1-2
+        name: proxmox ve 6.1-2
+      - code_name: ve-6.2-1
+        name: proxmox ve 6.2-1
+      - code_name: mail-6.2-1
+        name: proxmox mailgateway 6.2-1
   devuan:
     base_dir: devuan
     enabled: true
