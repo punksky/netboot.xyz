@@ -161,6 +161,18 @@ releases:
         name: bullseye (testing)
       - code_name: sid
         name: sid (unstable)
+  proxmox:
+    base_dir: proxmox
+    enabled: true
+    menu: linux
+    mirror: http://download.punksky.com/netboot/proxmox/
+    name: Proxmox
+    versions:
+      stable:
+      - code_name: buster
+        name: 10.0 (buster)
+      - code_name: stretch
+        name: 9.0 (stretch)
   devuan:
     base_dir: devuan
     enabled: true

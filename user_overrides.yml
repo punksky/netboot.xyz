@@ -6,17 +6,17 @@ generate_disks: true
 generate_checksums: true
 
 # set desired site name
-#site_name: mysitename.com
+site_name: boot.punksky.com
 
 # set desired boot domain
-#boot_domain: boot.mysitename.com
+boot_domain: boot.punksky.com
 
 # set boot version
 #boot_version: "2.x"
 
 #bootloader_tftp_enabled: false
-#bootloader_https_enabled: true
-#bootloader_http_enabled: true
+bootloader_https_enabled: true
+bootloader_http_enabled: true
 
 # set release overrides from standard netboot.xyz defaults
 #release_overrides:
@@ -36,5 +36,5 @@ generate_checksums: true
 #    enabled: false
 
 # set licensed media locations in boot.cfg
-# win_base_url:
+win_base_url: "http://download.punksky.com/netboot/windows/"
 # rhel_base_url: 
