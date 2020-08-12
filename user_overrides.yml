@@ -8,11 +8,8 @@ generate_signatures: true
 generate_version_file: true
 
 bootloader_multiple: true
-bootloader_disks:
-  - boot.punksky.com
-  - netboot.xyz
 
-site_name: boot.punksky.com
+site_name: punksky boot
 
 boot_domain: boot.punksky.com
 
