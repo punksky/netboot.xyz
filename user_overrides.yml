@@ -5,7 +5,7 @@ generate_disks: true
 generate_checksums: true
 
 # set desired site name
-site_name: punksky boot
+site_name: punksky-boot
 
 # set desired boot domain
 boot_domain: boot.punksky.com
