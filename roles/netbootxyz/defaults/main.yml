@@ -104,8 +104,8 @@ releases:
     mirror: mirror.rackspace.com
     name: Arch Linux
     versions:
-    - code_name: 2020.07.01
-      name: 2020.07.01
+    - code_name: 2020.08.01
+      name: 2020.08.01
   blackarch:
     enabled: true
     menu: linux
@@ -243,8 +243,8 @@ releases:
     mirror: https://downloads.ipfire.org
     name: IPFire
     versions:
-    - code_name: 2.25-core146
-      name: 2.25 Core146
+    - code_name: 2.25-core147
+      name: 2.25 Core147
   k3os:
     enabled: true
     menu: linux
@@ -259,16 +259,6 @@ releases:
     versions:
     - code_name: rolling
       name: Rolling Edition (2020.1)
-  livegrml:
-    enabled: true
-    menu: live
-    mirror: http://download.grml.org
-    name: Grml Live Linux
-    versions:
-    - code_name: grml-full
-      name: 2018.12 Full
-    - code_name: grml-small
-      name: 2018.12 Small
   mageia:
     base_dir: mageia
     enabled: true
@@ -291,6 +281,9 @@ releases:
     mirror: http://ftp.openbsd.org
     name: OpenBSD
     versions:
+    - code_name: '6.7'
+      image_ver: '67'
+      name: '6.7'
     - code_name: '6.6'
       image_ver: '66'
       name: '6.6'
@@ -304,8 +297,8 @@ releases:
       image_ver: '63'
       name: '6.3'
     - code_name: snapshots
-      image_ver: '66'
-      name: 6.6 Latest Snapshot
+      image_ver: '67'
+      name: 6.7 Latest Snapshot
   opensuse:
     base_dir: distribution/leap
     enabled: true
@@ -386,18 +379,18 @@ releases:
     mirror: https://netboot.joyent.com/os/
     name: SmartOS
     versions:
+    - code_name: 20200826T232925Z
+      name: 20200826T232925Z
+    - code_name: 20200813T030805Z
+      name: 20200813T030805Z
+    - code_name: 20200729T205408Z
+      name: 20200729T205408Z
     - code_name: 20200716T142843Z
       name: 20200716T142843Z
     - code_name: 20200715T195011Z
       name: 20200715T195011Z
     - code_name: 20200701T231659Z
       name: 20200701T231659Z
-    - code_name: 20200617T233107Z
-      name: 20200617T233107Z
-    - code_name: 20200603T203505Z
-      name: 20200603T203505Z
-    - code_name: 20200520T174734Z
-      name: 20200520T174734Z
   talos:
     enabled: true
     menu: linux
