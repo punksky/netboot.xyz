@@ -1,6 +1,6 @@
 ## netboot.xyz
 
-[![Build Status](https://travis-ci.com/netbootxyz/netboot.xyz.svg?branch=master)](https://travis-ci.com/netbootxyz/netboot.xyz)
+[![Build Status](https://github.com/netbootxyz/netboot.xyz/workflows/release/badge.svg)](https://github.com/netbootxyz/netboot.xyz/actions?query=workflow%3Arelease)
 [![Discord](https://img.shields.io/discord/425186187368595466)](https://discord.gg/An6PA2a)
 [![Release](https://img.shields.io/github/v/release/netbootxyz/netboot.xyz?color=hunter%20green)](https://github.com/netbootxyz/netboot.xyz/releases/latest)
 
@@ -98,8 +98,9 @@ In addition to being able to host netboot.xyz locally, you can also create your 
 
 | Name       | URL             | Installer Kernel | Live OS       |
 |------------|-----------------|------------------|---------------|
+| AlmaLinux | https://almalinux.org/ | Yes | No |
 | Alpine Linux | https://alpinelinux.org | Yes | No |
-| Anarchy Linux | https://www.anarchylinux.org | Yes | No |
+| Anarchy Linux | https://anarchyinstaller.org | Yes | No |
 | Arch Linux | https://www.archlinux.org | Yes | No |
 | Backbox | https://www.backbox.org | No | Yes |
 | BlackArch Linux | https://blackarch.org | Yes | Yes |
@@ -111,6 +112,7 @@ In addition to being able to host netboot.xyz locally, you can also create your 
 | Deepin | https://www.deepin.org | No | Yes |
 | Devuan | https://devuan.org | Yes | No |
 | Elementary OS | https://elementary.io | No | Yes |
+| EndeavourOS | https://endeavouros.com | No | Yes |
 | Fatdog64 | https://distro.ibiblio.org/fatdog/web/ | No | Yes |
 | Fedora | https://fedoraproject.org | Yes | Yes |
 | Feren OS | https://ferenos.weebly.com/ | Yes | No |
@@ -134,7 +136,7 @@ In addition to being able to host netboot.xyz locally, you can also create your 
 | OpenBSD | https://openbsd.org | Yes | No |
 | OpenSUSE | https://opensuse.org | Yes | No |
 | Oracle Linux | https://www.oracle.com/linux/ | Yes | Installer |
-| Parrot Security | https://www.parrotsec.org | Yes | Yes |
+| Parrot Security | https://www.parrotsec.org | No | Yes |
 | Peppermint | https://peppermintos.com | No | Yes |
 | Pop OS |https://system76.com/pop| No | Yes |
 | Q4OS | https://q4os.org | No | Yes |
@@ -150,8 +152,8 @@ In addition to being able to host netboot.xyz locally, you can also create your 
 | Talos | https://www.talos.dev/ | Yes | No |
 | Tiny Core Linux | https://tinycorelinux.net | Yes | Yes |
 | Ubuntu | https://www.ubuntu.com | Yes | Yes |
-| Velt | https://velt.io/ | No | Yes |
 | Voyager | https://voyagerlive.org | No | Yes |
+| VyOS | https://vyos.io | Yes | No |
 | Zen Installer | https://sourceforge.net/projects/revenge-installer | Yes | No |
 | Zorin OS | https://zorinos.com | No | Yes |
 
@@ -173,7 +175,7 @@ In addition to being able to host netboot.xyz locally, you can also create your 
 | Memtest | http://www.memtest.org/ | Kernel |
 | Rescatux | https://www.supergrubdisk.org/rescatux/ | LiveCD |
 | Super Grub2 Disk | http://www.supergrubdisk.org | ISO - Memdisk |
-| System Rescue CD | http://www.system-rescue-cd.org/ | LiveCD |
+| System Rescue | https://system-rescue.org/ | LiveCD |
 | The Smallest Server Suite | https://thesss.4mlinux.com/ | Kernel/Initrd |
 | Ultimate Boot CD | http://www.ultimatebootcd.com | ISO - Memdisk |
 

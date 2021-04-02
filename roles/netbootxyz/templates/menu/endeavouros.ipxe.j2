@@ -3,13 +3,13 @@
 goto ${menu} ||
 
 :live_menu
-set os System Rescue
+set os EndeavourOS
 menu ${os} - Current Arch [ ${arch} ]
 iseq ${arch} x86_64 && set arch_a amd64 || set arch_a ${arch}
 set ipparam BOOTIF=${netX/mac} ip=dhcp net.ifnames=0
 item --gap ${os} Versions
 {% for key, value in endpoints.items() | sort %}
-{% if value.os == "systemrescue" %}
+{% if value.os == "endeavouros" %}
 item {{ value.version }} ${space} ${os} {{ value.version }}
 {% endif %}
 {% endfor %}
@@ -17,7 +17,7 @@ choose live_version || goto live_exit
 goto ${live_version}
 
 {% for key, value in endpoints.items() | sort %}
-{% if value.os == "systemrescue" %}
+{% if value.os == "endeavouros" %}
 :{{ value.version }}
 set url ${live_endpoint}{{ value.path }}
 goto boot
@@ -27,7 +27,7 @@ goto boot
 
 :boot
 imgfree
-kernel ${url}vmlinuz archisobasedir=sysresccd ${ipparam} archiso_http_srv=${url} initrd=initrd ${cmdline}
+kernel ${url}vmlinuz archisobasedir=arch ${ipparam} archiso_http_srv=${url} initrd=initrd ${cmdline}
 initrd ${url}initrd
 boot
 

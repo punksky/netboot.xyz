@@ -14,3 +14,19 @@ netbootxyz_packages:
   - syslinux
   - syslinux-common
   - toilet
+
+pipxe_packages:
+  - acpica-tools
+  - binutils
+  - binutils-dev
+  - gcc
+  - libuuid1
+  - make
+  - mtools
+  - perl
+  - python
+  - subversion
+  - uuid
+  - uuid-dev
+  - virtualenv
+  - xz-utils
