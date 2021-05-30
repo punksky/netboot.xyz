@@ -14,21 +14,13 @@ bootloaders:
   hybrid:
   - desc: Used for CD/DVD, Virtual CDs, DRAC/iLO, VMware, Virtual Box
     ipxe_bin: ipxe.iso
-    output_bin: -hybrid.iso
-    type: ISO
-  - desc: Used for creation of USB Keys
-    ipxe_bin: ipxe.usb
-    output_bin: -hybrid.usb
-    type: USB
-  legacy:
-  - desc: Used for CD/DVD, Virtual CDs, DRAC/iLO, VMware, Virtual Box
-    ipxe_bin: ipxe.iso
     output_bin: .iso
     type: ISO
   - desc: Used for creation of USB Keys
-    ipxe_bin: ipxe.usb
-    output_bin: .usb
-    type: USB
+    ipxe_bin: ipxe.img
+    output_bin: .img
+    type: IMG
+  legacy:
   - desc: Used for booting from GRUB/EXTLINUX
     ipxe_bin: ipxe.lkrn
     output_bin: .lkrn
@@ -55,14 +47,6 @@ bootloaders:
     output_bin: -rpi4-snp.efi
     type: DHCP-snp
   uefi:
-  - desc: EFI BIOS, works in Virtual Box EFI mode
-    ipxe_bin: ipxe-efi.eiso
-    output_bin: -efi.iso
-    type: ISO
-  - desc: Used for creation of USB Keys
-    ipxe_bin: ipxe-efi.usb
-    output_bin: -efi.usb
-    type: USB
   - desc: DHCP EFI boot image file, uses built-in iPXE NIC drivers
     ipxe_bin: ipxe.efi
     output_bin: .efi
@@ -173,7 +157,7 @@ releases:
     mirror: https://builds.coreos.fedoraproject.org
     name: Fedora CoreOS
     versions:
-    - code_name: 33.20210314.3.0
+    - code_name: 33.20210328.3.0
       name: stable
   debian:
     archive_mirror: http://archive.debian.org
@@ -231,12 +215,12 @@ releases:
     mirror: http://download.fedoraproject.org
     name: Fedora
     versions:
+    - code_name: 34
+      name: 34
     - code_name: 33
       name: 33
     - code_name: 32
       name: 32
-    - code_name: 31
-      name: 31
   flatcar:
     enabled: true
     menu: linux
@@ -313,6 +297,9 @@ releases:
     mirror: http://ftp.openbsd.org
     name: OpenBSD
     versions:
+    - code_name: '6.9'
+      image_ver: '69'
+      name: '6.9'
     - code_name: '6.8'
       image_ver: '68'
       name: '6.8'
@@ -329,8 +316,8 @@ releases:
       image_ver: '64'
       name: '6.4'
     - code_name: snapshots
-      image_ver: '68'
-      name: 6.8 Latest Snapshot
+      image_ver: '69'
+      name: 6.9 Latest Snapshot
   opensuse:
     base_dir: distribution/leap
     enabled: true
@@ -369,6 +356,15 @@ releases:
     enabled: true
     menu: linux
     name: Red Hat Enterprise Linux
+  rockylinux:
+    base_dir: pub/rocky
+    enabled: true
+    menu: linux
+    mirror: http://download.rockylinux.org
+    name: Rocky Linux
+    versions:
+    - code_name: 8.3
+      name: 8.3
   scientific:
     base_dir: linux/scientific
     enabled: true
@@ -404,14 +400,14 @@ releases:
     mirror: https://netboot.joyent.com/os/
     name: SmartOS
     versions:
+    - code_name: 20210422T002312Z
+      name: 20210422T002312Z
+    - code_name: 20210408T001154Z
+      name: 20210408T001154Z
     - code_name: 20210325T002528Z
       name: 20210325T002528Z
     - code_name: 20210311T001742Z
       name: 20210311T001742Z
-    - code_name: 20210226T213821Z
-      name: 20210226T213821Z
-    - code_name: 20210225T124034Z
-      name: 20210225T124034Z
   talos:
     enabled: true
     menu: linux
@@ -546,6 +542,8 @@ releases:
     mirror: http://archive.ubuntu.com
     name: Ubuntu
     versions:
+    - code_name: hirsute
+      name: 21.04 Hirsute Hippo
     - code_name: groovy
       name: 20.10 Groovy Gorilla
     - code_name: focal
@@ -618,6 +616,14 @@ utilitiesefi:
     enabled: true
     name: Kaspersky Rescue Disk
     type: ipxemenu
+  redorescue:
+    enabled: true
+    initrd: ${live_endpoint}{{ endpoints.redorescue.path }}initrd
+    kernel: ${live_endpoint}{{ endpoints.redorescue.path }}vmlinuz boot=live noprompt nocomponents 
+      setkmap=us fetch=${live_endpoint}{{ endpoints.redorescue.path }}filesystem.squashfs
+      initrd=initrd
+    name: RedoRescue
+    type: direct
   rescatux:
     enabled: true
     initrd: ${live_endpoint}{{ endpoints.rescatux.path }}initrd
@@ -626,6 +632,14 @@ utilitiesefi:
       initrd=initrd
     name: Rescatux
     type: direct
+  rescuezilla:
+    enabled: true
+    name: Rescuezilla
+    type: ipxemenu
+  shredos:
+    enabled: true
+    name: ShredOS
+    type: ipxemenu
   systemrescue:
     enabled: true
     name: System Rescue CD
@@ -690,6 +704,14 @@ utilitiespcbios:
     type: memtest
     util_path: https://boot.netboot.xyz/utils/memtest86-5.01.0
     version: 5.01.0
+  redorescue:
+    enabled: true
+    initrd: ${live_endpoint}{{ endpoints.redorescue.path }}initrd
+    kernel: ${live_endpoint}{{ endpoints.redorescue.path }}vmlinuz boot=live noprompt nocomponents 
+      setkmap=us fetch=${live_endpoint}{{ endpoints.redorescue.path }}filesystem.squashfs
+      initrd=initrd
+    name: RedoRescue
+    type: direct
   rescatux:
     enabled: true
     initrd: ${live_endpoint}{{ endpoints.rescatux.path }}initrd
@@ -698,6 +720,14 @@ utilitiespcbios:
       initrd=initrd
     name: Rescatux
     type: direct
+  rescuezilla:
+    enabled: true
+    name: Rescuezilla
+    type: ipxemenu
+  shredos:
+    enabled: true
+    name: ShredOS
+    type: ipxemenu
   supergrub:
     enabled: true
     name: SuperGRUB

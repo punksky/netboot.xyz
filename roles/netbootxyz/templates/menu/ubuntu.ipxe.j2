@@ -23,6 +23,7 @@ choose ubuntu_version || goto ubuntu_exit
 iseq ${ubuntu_version} older_release && goto older_release ||
 iseq ${ubuntu_version} focal && set install_type sub ||
 iseq ${ubuntu_version} groovy && set install_type sub ||
+iseq ${ubuntu_version} hirsute && set install_type sub ||
 iseq ${ubuntu_version} focal-legacy && set ubuntu_version focal ||
 iseq ${install_type} sub && goto boot_type ||
 goto mirrorcfg
@@ -61,7 +62,7 @@ goto deb_install
 iseq ${install_type} deb && set install_name preseed ||
 iseq ${install_type} sub && set install_name autoinstall ||
 echo -n Specify ${install_name} URL for ${os} ${ubuntu_version}: && read install_url
-iseq ${install_type} deb && set install_params auto=true priority=low preseed/url=${install_url} ||
+iseq ${install_type} deb && set install_params auto=true priority=critical preseed/url=${install_url} ||
 iseq ${install_type} sub && set install_params autoinstall ds=nocloud-net;s=${install_url} ||
 goto deb_install
 
